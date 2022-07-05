@@ -1,0 +1,1 @@
+- background remover: https://www.photoroom.com/background-remover/

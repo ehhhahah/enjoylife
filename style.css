@@ -1,0 +1,136 @@
+:root {
+    --main: #fff;
+  }
+
+body {
+    color: white;
+    background-color: black;
+    padding: 10;
+    /* background-image: url("https://scontent.fktw1-1.fna.fbcdn.net/v/t1.6435-9/44624669_533943970382232_7805042796263374848_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=_dBMsFtngxYAX_e5bPC&_nc_ht=scontent.fktw1-1.fna&oh=00_AT8fLWSgBSUfIp3icAmRM_KhDtcqnmySF_6Zm-uNeiBqew&oe=62EB4B2B"); */
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: white;
+}
+  
+::selection {
+    color: black;
+    background: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 30vw;
+    font-style: italic;
+    margin-top: 0;
+    /* max-width: min-content; */
+    /* z-index: -1; */
+    position: absolute;
+    pointer-events: none;
+    text-shadow: 5px 5px 10px var(--main);
+}
+
+p {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: lighter;
+    line-height: 1.6;
+    text-align: justify;
+    background: black;
+    /* white-space: pre-wrap; */
+}
+
+.shadow-circle {
+    /* circle */
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background-color: var(--main);
+
+    /* position */
+    position: absolute;
+    pointer-events: none;
+
+    /* blur */
+    -webkit-filter: blur(100px);
+    -moz-filter: blur(100px);
+    -o-filter: blur(100px);
+    -ms-filter: blur(100px);
+    filter: blur(100px);
+}
+
+.albums {
+    display: inline-grid;
+    gap: 0px 0px;
+    margin: 5%;
+    justify-content: center;
+}
+
+.albums > iframe {
+    border: 0; 
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 600px) {
+    .albums {
+        grid-template-columns: auto auto;
+    }
+
+    .albums > iframe {
+        width: 40vw; 
+        height: 40vw;
+    }
+
+    .title {
+        margin-top: 75%;
+    }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .albums {
+        grid-template-columns: auto auto auto;
+    }
+
+    .albums > iframe {
+        width: 30vw; 
+        height: 30vw;
+    }
+
+    .title {
+        margin-top: 50%;
+    }
+}
+
+/* For computer */
+@media screen and (min-width: 1200px) {
+    .albums {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .albums > iframe {
+        width: 20vw; 
+        height: 20vw;
+    }
+}
+
+/* links */
+/* unvisited link */
+a:link {
+    color: #ccc;
+  }
+  /* visited link */
+  a:visited {
+    color: #999;
+  }
+  /* mouse over link */
+  a:hover {
+    color: #fff;
+  }
+  /* selected link */
+  a:active {
+    color: #fff;
+  }
